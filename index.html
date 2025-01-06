@@ -49,6 +49,7 @@
         score.wins=0;
         score.losses=0;
         score.ties=0;
+        localStorage.removeItem('score')
         alert(`Scores are resetted
 Wins:${score.wins} losses:${score.losses} ties:${score.ties}`)
         ">Reset Score</button>
@@ -60,11 +61,21 @@ Wins:${score.wins} losses:${score.losses} ties:${score.ties}`)
 
 // First function for playermove 
 // inside it has a second function is called for computermove
-const score={
-    wins:0,
-    losses:0,
-    ties:0
-}; 
+let score=
+    JSON.parse (localStorage.getItem('score'))||
+    {
+            wins:0,
+            losses:0,
+            ties:0
+        };
+
+    // if(score===null){
+    //     score={
+    //         wins:0,
+    //         losses:0,
+    //         ties:0
+    //     };
+    // }
 
 
 
@@ -106,7 +117,7 @@ function playGame(playermove){
             score.ties+=1;
         }
 
-        localStorage.setItem
+        localStorage.setItem('score', JSON.stringify(score));
 
     
         alert(`you picked ${playermove} and computer picked ${computermove} and the result is ${result}
