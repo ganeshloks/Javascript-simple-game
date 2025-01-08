@@ -52,9 +52,11 @@
         localStorage.removeItem('score')
         alert(`Scores are resetted
 Wins:${score.wins} losses:${score.losses} ties:${score.ties}`)
+            updatescore();
         ">Reset Score</button>
-
-
+        <p class="Js-result"></p>
+        <p class="Js-moves"></p>
+        <p class="Js-Score-Display"></p>
 
 <!-- Start of Script tag -->
 <script>
@@ -69,6 +71,7 @@ let score=
             ties:0
         };
 
+        updatescore();
     // if(score===null){
     //     score={
     //         wins:0,
@@ -119,12 +122,17 @@ function playGame(playermove){
 
         localStorage.setItem('score', JSON.stringify(score));
 
-    
-        alert(`you picked ${playermove} and computer picked ${computermove} and the result is ${result}
-
-wins:${score.wins} losses:${score.losses} ties:${score.ties}`)
+        updatescore();
+        document.querySelector('.Js-result').innerHTML= result;
+        
+        document.querySelector('.Js-moves').innerHTML=`you ${playermove} - ${computermove} computer`;
         }
        
+
+        function updatescore(){
+            document.querySelector('.Js-Score-Display')
+        .innerHTML=`wins:${score.wins} losses:${score.losses} ties:${score.ties}`;
+        }
        
         // End of first function
        
