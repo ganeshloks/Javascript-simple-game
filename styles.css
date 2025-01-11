@@ -1,0 +1,74 @@
+/* button{
+            display: inline-block;
+        height: 100px;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 20px;
+        } */
+
+        .buttonstyle{
+            height: 90px;
+            
+        }
+
+        /* button:hover{
+        transform: scale(1.2);
+        background-color: red;
+
+        } */
+
+        /* .namba:hover{
+            background-color:darkred ;
+            
+        } */
+        body{
+            background-color: rgb(25, 25, 25);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .Titlechange{
+            font-size: 30px;
+            font-weight: bold;
+        }
+       
+        .buttonmass{
+            background-color: transparent;
+            border: 3px dotted white;
+            height: 140px;
+            width: 140px;
+            margin-right: 50PX;
+            border-radius: 70px;
+            cursor: pointer;
+           
+        }
+        .buttonmass:hover{
+            background-color: green;
+            transition: 0.5s;
+        }
+        .result{
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        .scores{
+            margin-top: 50px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .namba{
+            font-size: 20px;
+            border: 3px dotted white;
+            background-color: transparent;
+            color: white;
+            border-radius: 45px;
+            height: 100px;
+            width: 100px;
+            padding:8px 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .namba:hover{
+            transition: 0.5s;
+            background-color: tomato;
+        }
