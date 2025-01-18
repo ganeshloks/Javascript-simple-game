@@ -9,7 +9,7 @@
         href="styles.css">
         </head>
         <body>
-           
+       <div class="formatting">   
         <p class="Titlechange">Rock paper Scissors</p>
 
         <!-- Button 1 (Rock) -->
@@ -19,22 +19,25 @@
 
         <!-- Button 2 (paper) -->
         <button onclick="
-           playGame('Paper')" class="buttonmass"><img src="./images/paper-emoji.png" class="buttonstyle"</button>
+           playGame('paper')" class="buttonmass"><img src="./images/paper-emoji.png" class="buttonstyle"</button>
 
     <!-- Button 3 (Scissors) -->
         <button onclick="
-      playGame('Scissors')
+      playGame('scissors')
         " class="buttonmass"><img src="./images/scissors-emoji.png" class="buttonstyle"></button>
 
         <button class="namba" onclick="
         score.wins=0;
         score.losses=0;
         score.ties=0;
-        localStorage.removeItem('score')
-        alert(`Scores are resetted
-Wins:${score.wins} losses:${score.losses} ties:${score.ties}`)
+        localStorage.removeItem('score');
+        resetmsg();
             updatescore();
         ">Reset Score</button>
+
+        <button onclick="
+        autoplay();
+        " class="play-yourself clean">Auto Play</button>
 
 
 
@@ -43,8 +46,10 @@ Wins:${score.wins} losses:${score.losses} ties:${score.ties}`)
         <p class="Js-moves ">
         </p>
         <p class="Js-Score-Display scores"></p>
+       </div>
 
 <!-- Start of Script tag -->
 <script src="./index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
         </body>
         </html>
